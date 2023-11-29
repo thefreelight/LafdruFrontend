@@ -1,1 +1,1 @@
-# lafdru-web
+# lafdru-frontend
