@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 3000
 
 # 指定容器启动时运行的命令
-CMD ["npm", "start"]
+CMD ["npm", "run", "start-web"]
