@@ -4,11 +4,12 @@ FROM node:latest
 # 设置工作目录
 WORKDIR /app
 
-# 将 package.json 和 package-lock.json（如果存在）复制到容器中
-COPY package*.json ./
+# 将 package.json 和 yarn.lock 复制到容器中
+# 如果您没有 yarn.lock 文件，仅复制 package.json 即可
+COPY package.json yarn.lock* ./
 
 # 安装项目依赖
-RUN npm install
+RUN yarn install
 
 # 复制项目文件到容器中
 COPY . .
@@ -17,4 +18,4 @@ COPY . .
 EXPOSE 3000
 
 # 指定容器启动时运行的命令
-CMD ["npm", "run", "start-web"]
+CMD ["yarn", "run", "start-web"]
