@@ -1,2 +1,2 @@
-# lafdru_frontend
+# LafdruFrontend
 
